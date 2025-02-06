@@ -1,0 +1,48 @@
+.contact-section {
+  background-color: #f9f9f9;
+  padding: 40px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 20px auto;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  font-size: 24px;
+  color: #5a2eaa;
+  margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  width: 240px;
+  background-color: var(--Green);
+  font-family: "Nunito";
+  height: 40px;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-transform: uppercase;
+font-weight: bold;
+  padding: 0.8rem 2rem;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  box-shadow: 0px 7px 0px #a11865;
+}
+
+/* .contact-form button:hover {
+  background-color: #bd1172;
+} */

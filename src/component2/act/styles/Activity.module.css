@@ -1,0 +1,46 @@
+.container {
+  background-color: snow;
+  background-size: cover;
+  height: 170vh;
+}
+
+.title {
+  font-family: "Nunito", serif;
+  font-optical-sizing: auto;
+  font-size: 3.5rem;
+  color: rgba(66, 63, 141, 255);
+  font-weight: bold;
+}
+.cardsContainer {
+  font-family: "Nunito", serif;
+  gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+.cardsContainerText {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  padding: 10px;
+}
+.carousel {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .carousel-item img {
+    height: auto;
+    width: 100%;
+  }
+
+  .cardsContainerText h3 {
+    font-size: 1.5rem;
+  }
+
+  .cardsContainerText p {
+    font-size: 1rem;
+  }
+}

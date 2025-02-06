@@ -1,0 +1,86 @@
+:root {
+  --main-color: #fbcc1b;
+  --secound-color: #14dad6;
+  --third-color: #ed068c;
+  --fourth-color: #2a92ca;
+  --fifth-color: #423f8c;
+  --sixth-color: #776289;
+  color: white;
+  --font-family1: "Nunito", serif;
+  --font-family2: "Inter", serif;
+  --font-optical-sizing: auto;
+}
+
+.card {
+  width: 100%;
+  height: 700px;
+  background-image: url("../../../public//img/Summer_Learning_Tip_2_-_Scrapbooking_1000x500_1.png");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-content {
+  background-color: rgb(247, 241, 241);
+  width: 500px;
+  height: 500px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-inline: 50px;
+  padding-top: 20px;
+}
+.card-content h1 {
+  color: var(--fifth-color);
+  font-family: var(--font-family2);
+}
+.card-content .p1 {
+  color: var(--third-color);
+  font-family: var(--font-family1);
+}
+.card-content .p2 {
+  color: #4b4988;
+  text-align: center;
+  padding-inline: 30px;
+  font-size: 18px;
+  font-family: var(--font-family1);
+}
+.card-content button {
+  background-color: #ed068c;
+  color: white;
+  padding: 15px;
+  /* padding-inline: 15px; */
+  padding: 15px 15px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  width: 150px;
+  font-size: 20px;
+  font-family: var(--font-family2);
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+.card-content button:hover {
+  background-color: #12d9df;
+}
+
+.timer {
+  display: flex;
+}
+.timer span {
+  font-size: 14px;
+  font-family: var(--font-family2);
+}
+
+.card-content .num {
+  color: var(--fifth-color);
+  background-color: rgba(245, 210, 216, 0.767);
+  border-radius: 10px;
+  font-size: px;
+  margin: 10px;
+  padding: 8px;
+  padding-inline: 18px;
+  text-align: center;
+  font-family: var(--font-family1);
+}

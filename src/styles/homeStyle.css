@@ -1,0 +1,25 @@
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.ant-float-btn {
+  transition: transform 0.3s ease-in-out;
+}
+
+.ant-float-btn:hover {
+  transform: scale(1.1);
+}
+.lollipop-button {
+  background-color: #ffd166 !important; /* Candy yellow */
+  color: white !important;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+.lollipop-button:hover {
+  animation: spin 0.5s linear infinite;
+}

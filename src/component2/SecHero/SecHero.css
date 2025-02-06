@@ -1,0 +1,22 @@
+.header-background {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 500px;
+  background-image: url("../../../public/img/kids\ cut\ .jpg");
+  background-size: cover;
+  background-position: center;
+}
+.title {
+  font-weight: bold;
+  position: relative;
+  font-family: "Nunito";
+
+  color: snow;
+  text-shadow: 2px 2px 4px #000000;
+  font-size: 70px;
+  text-align: center;
+  margin-top: 0;
+  padding-top: 200px;
+  padding-bottom: 100px;
+}

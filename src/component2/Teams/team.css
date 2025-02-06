@@ -1,0 +1,101 @@
+.Mangement {
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  margin-top: 72px;
+  max-width: 100%;
+}
+.Mangement h2 {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 48px;
+  letter-spacing: 0px;
+  margin-top: 100px;
+  /* color: #130f3e; */
+  color: #dc552c;
+  font-family: "Nunito";
+}
+.Mangement p {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 29px;
+  letter-spacing: 0px;
+  margin-top: 8px;
+  /* color: #130f3e; */
+  color: #404969;
+  font-family: "Nunito";
+}
+.container-mang {
+  /* display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 2fr));
+    align-items: center;
+    justify-content: center;
+    gap: 40px 92px;
+    max-width: 100%;
+    width: calc(100% - 150px);
+    margin: 50px auto 0 auto; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.container-mang .member {
+  /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  text-align: center; /* Center text */
+  margin-top: 20px; /* Adjust margin as needed */
+}
+
+@media (max-width: 767px) {
+  .Mangement {
+    padding-left: 0px;
+  }
+  .container-mang {
+    width: calc(100% - 10px);
+  }
+}
+@media (max-width: 605px) {
+  .Mangement h2 {
+    font-size: 30px;
+    margin-top: 100px;
+  }
+  .Mangement p {
+    font-size: 14px;
+    margin-top: 8px;
+  }
+}
+
+.member h4 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0px;
+  /* color: #130f3e; */
+  color: #404969;
+  margin-top: 16px;
+  font-family: "Nunito";
+}
+.member h6 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0px;
+  /* color: #130f3ed9; */
+  color: #404969;
+  margin-top: 8px;
+  font-family: "Nunito";
+}
+
+.icons-person a {
+  font-size: 22px;
+  font-family: "Nunito";
+}
