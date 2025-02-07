@@ -13,6 +13,7 @@ const AboutRoute = Loadable(lazy(() => import('../pages/about')));
 const ContactRoute = Loadable(lazy(() => import('../pages/contact-page')));
 const Profile = Loadable(lazy(() => import('../views/profile/profile')));
 const StudentProfile = Loadable(lazy(() => import('../views/studentProfile/profile')));
+const TeacherPro = Loadable(lazy(() => import('../views/profile/teacherPro')));
 
 // ==============================|| MAIN ROUTES ||============================== //
 
@@ -34,12 +35,16 @@ const MainRoutes = {
       element: <DashboardDefault />
     },
     {
-      path: 'profile',
+      path: 'profile2/profile',
       element: <Profile />
     },
     {
       path: 'sample-page',
       element: <SamplePage />
+    },
+    {
+      path: 'profile2',
+      element: <TeacherPro />
     }
   ]
 };

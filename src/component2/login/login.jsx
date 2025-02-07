@@ -2,7 +2,10 @@ import React, { useState } from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { useNavigate } from 'react-router-dom';
-import './log.css';
+import axios from 'axios';
+
+const TEACHERS_API_URL = 'http://localhost:5000/teachers';
+const STUDENTS_API_URL = 'http://localhost:5000/students';
 
 function App({ handleScrollToSignup }) {
   const [loginError, setLoginError] = useState('');
@@ -11,6 +14,7 @@ function App({ handleScrollToSignup }) {
   const goToDash = () => {
     navigate('/dashboard');
   };
+
   const goToHome = () => {
     navigate('/home');
   };
@@ -28,24 +32,31 @@ function App({ handleScrollToSignup }) {
         .required('Required')
         .matches(/^(?=.*[A-Z])(?=.*\d).{8,}$/, 'Must include one uppercase letter, one number, and be at least 8 characters')
     }),
-    onSubmit: (values) => {
-      // قراءة بيانات المعلمين من ملف JSON
-      fetch('/teachers.json')
-        .then(response => response.json())
-        .then(usersData => {
-          const foundUser = usersData.find((user) => user.email === values.email && user.password === values.password);
-          if (foundUser) {
-            // إذا تم العثور على المعلم في البيانات
-            goToDash();
-          } else {
-            // إذا لم يتم العثور عليه
-            goToHome();
-          }
-        })
-        .catch(error => {
-          console.error("Error loading users data: ", error);
-          goToHome(); // في حال فشل تحميل البيانات
-        });
+    onSubmit: async (values) => {
+      try {
+        const [teachersResponse, studentsResponse] = await Promise.all([axios.get(TEACHERS_API_URL), axios.get(STUDENTS_API_URL)]);
+
+        const teachersData = teachersResponse.data || [];
+        const studentsData = studentsResponse.data || [];
+
+        console.log('Teachers:', teachersData);
+        console.log('Students:', studentsData);
+
+        const foundTeacher = teachersData.find((user) => user.email === values.email && user.password === values.password);
+        const foundStudent = studentsData.find((user) => user.email === values.email && user.password === values.password);
+
+        if (foundTeacher) {
+          goToDash();
+        } else if (foundStudent) {
+          goToHome();
+        } else {
+          console.error('Invalid email or password');
+          setLoginError('Invalid email or password');
+        }
+      } catch (error) {
+        console.error('Error during login:', error);
+        setLoginError('Login failed, please try again later');
+      }
     }
   });
 
@@ -68,6 +79,7 @@ function App({ handleScrollToSignup }) {
                 value={formik.values.email}
               />
               {formik.touched.email && formik.errors.email ? <div style={{ color: 'red' }}>{formik.errors.email}</div> : null}
+
               <input
                 type="password"
                 name="password"
@@ -78,9 +90,13 @@ function App({ handleScrollToSignup }) {
                 value={formik.values.password}
               />
               {formik.touched.password && formik.errors.password ? <div style={{ color: 'red' }}>{formik.errors.password}</div> : null}
+
+              {loginError && <div style={{ color: 'red' }}>{loginError}</div>}
+
               <button className="subBtn" type="submit">
                 Log in
               </button>
+
               <small>
                 <p>
                   Don't have an account?{' '}

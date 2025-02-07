@@ -13,7 +13,6 @@ import reducer from 'store/reducer';
 import * as serviceWorker from 'serviceWorker';
 import './i18n';
 const store = configureStore({ reducer });
-
 const root = createRoot(document.getElementById('root'));
 
 // ==============================|| MAIN - REACT DOM RENDER  ||==============
