@@ -1,13 +1,13 @@
-import React from 'react';
-import { useState } from 'react';
-import './log.css';
+import React, { useState } from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { useNavigate } from 'react-router-dom';
+import './log.css';
 
 function App({ handleScrollToSignup }) {
   const [loginError, setLoginError] = useState('');
   const navigate = useNavigate();
+
   const goToDash = () => {
     navigate('/dashboard');
   };
@@ -29,14 +29,23 @@ function App({ handleScrollToSignup }) {
         .matches(/^(?=.*[A-Z])(?=.*\d).{8,}$/, 'Must include one uppercase letter, one number, and be at least 8 characters')
     }),
     onSubmit: (values) => {
-      const savedUsersData = JSON.parse(localStorage.getItem('usersData')) || [];
-      const foundUser = savedUsersData.find((user) => user.email === values.email && user.password === values.password);
-
-      if (foundUser) {
-        goToDash();
-      } else {
-        goToHome();
-      }
+      // قراءة بيانات المعلمين من ملف JSON
+      fetch('/teachers.json')
+        .then(response => response.json())
+        .then(usersData => {
+          const foundUser = usersData.find((user) => user.email === values.email && user.password === values.password);
+          if (foundUser) {
+            // إذا تم العثور على المعلم في البيانات
+            goToDash();
+          } else {
+            // إذا لم يتم العثور عليه
+            goToHome();
+          }
+        })
+        .catch(error => {
+          console.error("Error loading users data: ", error);
+          goToHome(); // في حال فشل تحميل البيانات
+        });
     }
   });
 
@@ -70,7 +79,7 @@ function App({ handleScrollToSignup }) {
               />
               {formik.touched.password && formik.errors.password ? <div style={{ color: 'red' }}>{formik.errors.password}</div> : null}
               <button className="subBtn" type="submit">
-                log in{' '}
+                Log in
               </button>
               <small>
                 <p>

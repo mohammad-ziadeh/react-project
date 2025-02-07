@@ -1,0 +1,24 @@
+{
+    "teachers":[
+        {
+            "email":"AliAhmad@gmail.com",
+            "firstName":"Ali",
+            "lastName":"Ahmed",
+            "password":"Aliahmad1234",
+            "profilepicture":""
+                },
+                {
+                    "email":"LailaMohamad@gmail.com",
+                    "firstName":"Laila",
+                    "lastName":"Mohamad",
+                    "password":"Lailmohamada1234",
+                    "profilepicture":""
+                        }, {
+                            "email":"RawanAbdalluah@gmail.com",
+                            "firstName":"Rawan",
+                            "lastName":"Abdalluah",
+                            "password":"Rawanabdalluah1234",
+                            "profilepicture":""
+                                }
+    ]
+}
