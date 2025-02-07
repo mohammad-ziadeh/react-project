@@ -122,6 +122,11 @@
 // };
 
 // export default Crud;
+
+
+// 
+
+
 import React, { useState, useEffect } from 'react';
 import CRUDTable, { Fields, Field, CreateForm, UpdateForm, DeleteForm } from 'react-crud-table';
 import axios from 'axios';
@@ -131,52 +136,32 @@ const API_URL = 'http://localhost:5000/tasks';
 
 const Crud = () => {
   const [tasks, setTasks] = useState([]);
-  const [refreshKey, setRefreshKey] = useState(0);
-
-  const fetchTasks = async () => {
-    try {
-      const response = await axios.get(API_URL);
-      const sortedTasks = response.data.sort((a, b) => a.id - b.id);
-      setTasks(sortedTasks);
-    } catch (error) {
-      console.error('Error fetching tasks:', error);
-    }
-  };
 
   useEffect(() => {
     fetchTasks();
   }, []);
 
-  const reorderIds = async (updatedTasks) => {
-    const reorderedTasks = updatedTasks.map((task, index) => ({ ...task, id: index + 1 }));
-    setTasks(reorderedTasks);
-    setRefreshKey((prevKey) => prevKey + 1);
-
-    for (const task of reorderedTasks) {
-      await axios.put(`${API_URL}/${task.id}`, task, {
-        headers: { 'Content-Type': 'application/json' }
-      });
+  const fetchTasks = async () => {
+    try {
+      const response = await axios.get(API_URL);
+      setTasks(response.data);
+    } catch (error) {
+      console.error('Error fetching tasks:', error);
     }
   };
 
   const service = {
     fetchItems: async () => {
-      return tasks.map((task, index) => ({ ...task, index: index + 1 }));
+      return tasks;
     },
 
     create: async (task) => {
       try {
-        const newTask = { ...task, id: tasks.length + 1 };
-        const response = await axios.post(API_URL, newTask, {
+        const response = await axios.post(API_URL, task, {
           headers: { 'Content-Type': 'application/json' }
         });
 
-        setTasks((prevTasks) => {
-          const updatedTasks = [...prevTasks, response.data];
-          reorderIds(updatedTasks);
-          return updatedTasks;
-        });
-
+        setTasks((prevTasks) => [...prevTasks, response.data]);
         return response.data;
       } catch (error) {
         console.error('Error creating task:', error);
@@ -185,13 +170,13 @@ const Crud = () => {
 
     update: async (data) => {
       try {
+        console.log("Updating:", data);
+        
         await axios.put(`${API_URL}/${data.id}`, data, {
           headers: { 'Content-Type': 'application/json' }
         });
 
         setTasks((prevTasks) => prevTasks.map((task) => (task.id === data.id ? data : task)));
-
-        setRefreshKey((prevKey) => prevKey + 1);
         return data;
       } catch (error) {
         console.error('Error updating task:', error);
@@ -200,14 +185,11 @@ const Crud = () => {
 
     delete: async (data) => {
       try {
+        console.log("Deleting:", data);
+
         await axios.delete(`${API_URL}/${data.id}`);
 
-        setTasks((prevTasks) => {
-          const updatedTasks = prevTasks.filter((task) => task.id !== data.id);
-          reorderIds(updatedTasks);
-          return updatedTasks;
-        });
-
+        setTasks((prevTasks) => prevTasks.filter((task) => task.id !== data.id));
         return data;
       } catch (error) {
         console.error('Error deleting task:', error);
@@ -216,10 +198,10 @@ const Crud = () => {
   };
 
   return (
-    <div style={{ margin: 'auto', width: 'fit-content' }} key={refreshKey}>
-      <CRUDTable caption="students" fetchItems={() => service.fetchItems()}>
+    <div style={{ margin: 'auto', width: 'fit-content' }}>
+      <CRUDTable caption="Students" fetchItems={() => service.fetchItems()}>
         <Fields>
-          <Field name="index" label="No." />
+          <Field name="id" label="ID" />
           <Field name="name" label="Name" placeholder="Enter Name" />
           <Field name="email" label="Email" placeholder="Enter Email" />
           <Field name="password" label="Password" placeholder="Enter Password" type="password" />
@@ -280,3 +262,4 @@ const Crud = () => {
 };
 
 export default Crud;
+
