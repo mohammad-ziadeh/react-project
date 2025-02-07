@@ -97,8 +97,8 @@ function About() {
           </ul>
         </div>
         {/* ............................ */}
-        <div className="imag">
-          <img src={pic}></img>
+        <div>
+          <img className="imag" src={pic}></img>
         </div>
 
         {/* ........................................ */}
