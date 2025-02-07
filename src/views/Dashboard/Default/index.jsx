@@ -5,8 +5,8 @@ import { useTheme, styled } from '@mui/material/styles';
 import { Grid, Card, CardHeader, CardContent, Typography, Divider, LinearProgress } from '@mui/material';
 
 //project import
-import SalesLineCard from 'views/Dashboard/card/SalesLineCard';
-import SalesLineCardData from 'views/Dashboard/card/sale-chart-1';
+// import SalesLineCard from 'views/Dashboard/card/SalesLineCard';
+// import SalesLineCardData from 'views/Dashboard/card/sale-chart-1';
 import RevenuChartCard from 'views/Dashboard/card/RevenuChartCard';
 import RevenuChartCardData from 'views/Dashboard/card/revenu-chart';
 import ReportCard from './ReportCard';
@@ -15,14 +15,14 @@ import { gridSpacing } from 'config.js';
 
 // assets
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
-import TrendingDownIcon from '@mui/icons-material/TrendingDown';
+// import TrendingDownIcon from '@mui/icons-material/TrendingDown';
 import CheckIcon from '@mui/icons-material/Check';
-import SchoolIcon from '@mui/icons-material/School';
-import MonetizationOnTwoTone from '@mui/icons-material/MonetizationOnTwoTone';
+// import SchoolIcon from '@mui/icons-material/School';
+// import MonetizationOnTwoTone from '@mui/icons-material/MonetizationOnTwoTone';
 import BackpackIcon from '@mui/icons-material/Backpack';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
-import DescriptionTwoTone from '@mui/icons-material/DescriptionTwoTone';
-import ThumbUpAltTwoTone from '@mui/icons-material/ThumbUpAltTwoTone';
+// import DescriptionTwoTone from '@mui/icons-material/DescriptionTwoTone';
+// import ThumbUpAltTwoTone from '@mui/icons-material/ThumbUpAltTwoTone';
 import CalendarTodayTwoTone from '@mui/icons-material/CalendarTodayTwoTone';
 
 // custom style
@@ -95,7 +95,7 @@ const Default = () => {
             <Grid container spacing={gridSpacing}>
               <Grid item xs={12} sm={6}>
                 <Grid container spacing={gridSpacing}>
-                  <Grid item xs={12}>
+                  {/* <Grid item xs={12}>
                     <SalesLineCard
                       chartData={SalesLineCardData}
                       title="Sales Per Day"
@@ -112,9 +112,9 @@ const Default = () => {
                         }
                       ]}
                     />
-                  </Grid>
+                  </Grid> */}
                   <Grid item xs={12} sx={{ display: { md: 'block', sm: 'none' } }}>
-                    <Card>
+                    {/* <Card>
                       <CardContent sx={{ p: '0 !important' }}>
                         <Grid container alignItems="center" spacing={0}>
                           <FlatCardBlock>
@@ -147,7 +147,7 @@ const Default = () => {
                           </FlatCardBlock>
                         </Grid>
                       </CardContent>
-                    </Card>
+                    </Card> */}
                   </Grid>
                 </Grid>
               </Grid>

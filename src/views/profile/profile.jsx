@@ -145,7 +145,7 @@ function AccountSettings() {
       </div>
 
       <hr style={{ borderColor: '#e0e0e0' }} />
-
+      {/* 
       <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
         <Alert
           variant="error"
@@ -153,7 +153,7 @@ function AccountSettings() {
           description="Permanently remove your account. This action is not reversible."
           actions={<Button variant="destructive-secondary">Delete account</Button>}
         />
-      </div>
+      </div> */}
     </div>
   );
 }

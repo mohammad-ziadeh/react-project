@@ -1,3 +1,44 @@
 {
-  "tasks": []
+  "teachers": [
+    {
+      "email": "mohammad@gamil.com",
+      "password": "momoA123"
+    },
+    {
+      "email": "rawan@gamil.com",
+      "password": "ramomoA123"
+    },
+    {
+      "email": "raneem@gamil.com",
+      "password": "rnmomoA123"
+    },
+    {
+      "email": "abd@gamil.com",
+      "password": "abdmomoA123"
+    }
+  ],
+  "students": [
+    {
+      "email": "studentrawan@gamil.com",
+      "password": "stmomoAS234"
+    },
+    {
+      "email": "studentraneem@gamil.com",
+      "password": "stramomoAS234"
+    },
+    {
+      "email": "studentmohammad@gamil.com",
+      "password": "momoAS234"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "1",
+      "name": "mohamad",
+      "email": "mohammad@gamil.com",
+      "password": "1234",
+      "age": 43,
+      "address": "098765432"
+    }
+  ]
 }

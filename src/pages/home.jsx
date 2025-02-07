@@ -10,7 +10,6 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Event from '../component2/eventCount/event';
 
-
 export default function home() {
   return (
     <div style={{ backgroundColor: 'snow' }}>
