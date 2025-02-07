@@ -24,7 +24,7 @@ export default function CreatAndLogin() {
  
   };
   return (
-    <div style={{ overflow: "hidden", height: "130vh" }}>
+    <div className="noScroll" style={{ overflow: "hidden", height: "130vh" }}>
       <div ref={signupSectionRef}>
         <Signup handleScrollToLogin={handleScrollToLogin} />
       </div>

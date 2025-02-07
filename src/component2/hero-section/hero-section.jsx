@@ -9,18 +9,18 @@ function Hero() {
 
   return (
     <div className="hero-section" style={{ backgroundImage: `url(${pic})` }}>
-      {/* <div className="hero-content">
+      <div className="hero-content">
         <h1 className="hero-title" style={{ fontFamily: 'Nunito' }}>
           {t('title4')}
         </h1>
         <p className="hero-subtitle" style={{ fontFamily: 'Nunito' }}>
           {t('title9')}
         </p>
-        <button onClick={goToCreat} className="hero-button" style={{ fontFamily: 'Nunito' }}>
+        {/* <button onClick={goToCreat} className="hero-button" style={{ fontFamily: 'Nunito' }}>
           {t('title10')}
-        </button>
+        </button> */}
         <div className="hero-image"></div>
-      </div> */}
+      </div>
     </div>
   );
 }

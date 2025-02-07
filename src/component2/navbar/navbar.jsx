@@ -36,7 +36,12 @@ function Navbar() {
   };
 
   return (
-    <nav className="navbar">
+    <nav className="navbar"
+    style={{
+      position: 'sticky',
+      top: 0,
+      zIndex: 1000,
+    }}>
       <Segmented
         options={Object.keys(lngs).map((lng) => ({
           label: lngs[lng].nativeName,
