@@ -18,7 +18,7 @@ import { useNavigate } from 'react-router-dom';
 const ProfileSection = () => {
   const theme = useTheme();
   const navigate = useNavigate();
-  const goToProfile = () => navigate('profile');
+  const goToProfile = () => navigate('profile2');
   const [selectedIndex, setSelectedIndex] = React.useState(1);
   const [open, setOpen] = React.useState(false);
   const anchorRef = React.useRef(null);
