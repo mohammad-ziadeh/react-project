@@ -38,7 +38,7 @@ function Backschool() {
 
   return (
     <>
-      <div className="card">
+      <div className="card21">
         <div className="card-content">
           <h2 className="p1">29 February 2025</h2>
           <h1>Back to school</h1>
