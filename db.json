@@ -1,3 +1,52 @@
 {
-  "tasks": []
+  "teachers": [
+    {
+      "email": "mohammad@gamil.com",
+      "password": "momoA123"
+    },
+    {
+      "email": "rawan@gamil.com",
+      "password": "ramomoA123"
+    },
+    {
+      "email": "raneem@gamil.com",
+      "password": "rnmomoA123"
+    },
+    {
+      "email": "abd@gamil.com",
+      "password": "abdmomoA123"
+    }
+  ],
+  "students": [
+    {
+      "email": "studentrawan@gamil.com",
+      "password": "stmomoAS234"
+    },
+    {
+      "email": "studentraneem@gamil.com",
+      "password": "stramomoAS234"
+    },
+    {
+      "email": "studentmohammad@gamil.com",
+      "password": "momoAS234"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "1",
+      "password": "5242",
+      "name": "abdkarkash",
+      "email": "abdkarkash@gmail.com",
+      "age": 52,
+      "address": "aqaba, al-thaltha, Basman Str"
+    },
+    {
+      "id": "2",
+      "password": "522",
+      "name": "abdkarkash",
+      "email": "rawan@gmail.com",
+      "age": 20,
+      "address": "Amman,jabl al-husin, al-shahed St"
+    }
+  ]
 }

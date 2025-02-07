@@ -20,7 +20,7 @@ const Dash = () => {
   return (
     <>
       {
-        <NavigationScroll>
+        <NavigationScroll >
           <StyledEngineProvider injectFirst>
             <ThemeProvider theme={theme(customization)}>
               <CssBaseline />
