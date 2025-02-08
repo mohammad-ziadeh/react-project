@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./event.css";
+import { useTranslation } from 'react-i18next';
+
 
 function Backschool() {
   const [timerDays, setTimerDays] = useState(0);
@@ -11,6 +13,7 @@ function Backschool() {
     const countDownDate = new Date("February 29, 2025").getTime();
 
     let interval = setInterval(() => {
+      const { t } = useTranslation();
       const now = new Date().getTime();
       const distance = countDownDate - now;
 
@@ -40,7 +43,7 @@ function Backschool() {
     <>
       <div className="card21">
         <div className="card-content">
-          <h2 className="p1">29 February 2025</h2>
+          <h2 className="p1">{t("29 February 2025")}</h2>
           <h1>Back to school</h1>
           <p className="p2">
             As the new school year approaches, we are eagerly awaiting a new
