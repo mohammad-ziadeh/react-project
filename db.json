@@ -3,22 +3,30 @@
     {
       "email": "mohammad@gamil.com",
       "password": "momoA123",
-      "id": "dcb6"
+      "firstName": "Mohammad",
+      "lastName": "Ziadeh",
+      "id": "50e3"
     },
     {
       "email": "rawan@gamil.com",
       "password": "ramomoA123",
-      "id": "ad8f"
+      "firstName": "rawan",
+      "lastName": "teacher44",
+      "id": "e054"
     },
     {
       "email": "raneem@gamil.com",
       "password": "rnmomoA123",
-      "id": "57de"
+      "firstName": "raneem",
+      "lastName": "teacher33",
+      "id": "d25e"
     },
     {
       "email": "abd@gamil.com",
       "password": "abdmomoA123",
-      "id": "3a0a"
+      "firstName": "abd",
+      "lastName": "karkash",
+      "id": "7e3e"
     }
   ],
   "students": [
@@ -37,14 +45,28 @@
       "password": "momoAD1234",
       "age": 32,
       "address": "876"
+    },
+    {
+      "id": "3",
+      "name": "rawan",
+      "email": "rawan@gamil.com",
+      "password": "876Agg544",
+      "age": 23,
+      "address": "777777778"
     }
   ],
   "lastLoggedInStudent": {
-    "id": "2",
-    "name": "abd",
-    "email": "student@gamil.com",
-    "password": "momoAD1234",
-    "age": 32,
-    "address": "876"
+    "id": "1",
+    "name": "mohamad",
+    "email": "mohammedziadeh6@gmail.com",
+    "password": "momoFG567",
+    "age": 12,
+    "address": "99999"
+  },
+  "lastLoggedInTeacher": {
+    "email": "mohammad@gamil.com",
+    "password": "momoA123",
+    "firstName": "Mohammad",
+    "lastName": "Ziadeh"
   }
 }

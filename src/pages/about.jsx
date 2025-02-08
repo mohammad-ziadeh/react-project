@@ -34,7 +34,7 @@ export default function Team({ Title }) {
       </ScrollAnimation>
       <br />
       <br />
-      <h2
+      {/* <h2
         style={{
           textAlign: "center",
           fontSize: "40px",
@@ -47,10 +47,10 @@ export default function Team({ Title }) {
       >
         {t("student")}
       </h2>
-      <br />
-      <ScrollAnimation animateIn="fadeIn">
+      <br /> */}
+      {/* <ScrollAnimation animateIn="fadeIn">
         <Motion />
-      </ScrollAnimation>
+      </ScrollAnimation> */}
       <Footer />
     </div>
   );
