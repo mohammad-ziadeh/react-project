@@ -2,43 +2,71 @@
   "teachers": [
     {
       "email": "mohammad@gamil.com",
-      "password": "momoA123"
+      "password": "momoA123",
+      "firstName": "Mohammad",
+      "lastName": "Ziadeh",
+      "id": "50e3"
     },
     {
       "email": "rawan@gamil.com",
-      "password": "ramomoA123"
+      "password": "ramomoA123",
+      "firstName": "rawan",
+      "lastName": "teacher44",
+      "id": "e054"
     },
     {
       "email": "raneem@gamil.com",
-      "password": "rnmomoA123"
+      "password": "rnmomoA123",
+      "firstName": "raneem",
+      "lastName": "teacher33",
+      "id": "d25e"
     },
     {
       "email": "abd@gamil.com",
-      "password": "abdmomoA123"
+      "password": "abdmomoA123",
+      "firstName": "abd",
+      "lastName": "karkash",
+      "id": "7e3e"
     }
   ],
   "students": [
     {
-      "email": "studentrawan@gamil.com",
-      "password": "stmomoAS234"
-    },
-    {
-      "email": "studentraneem@gamil.com",
-      "password": "stramomoAS234"
-    },
-    {
-      "email": "studentmohammad@gamil.com",
-      "password": "momoAS234"
-    }
-  ],
-  "tasks": [
-    {
       "id": "1",
       "name": "mohamad",
-      "email": "mohammad@gamil.com",
-      "password": "1234",
-      "age": 43,
-      "address": "098765432"
+      "email": "mohammedziadeh6@gmail.com",
+      "password": "momoFG567",
+      "age": 12,
+      "address": "99999"
+    },
+    {
+      "id": "2",
+      "name": "abd",
+      "email": "student@gamil.com",
+      "password": "momoAD1234",
+      "age": 32,
+      "address": "876"
+    },
+    {
+      "id": "3",
+      "name": "rawan",
+      "email": "rawan@gamil.com",
+      "password": "876Agg544",
+      "age": 23,
+      "address": "777777778"
     }
-  ]
+  ],
+  "lastLoggedInStudent": {
+    "id": "1",
+    "name": "mohamad",
+    "email": "mohammedziadeh6@gmail.com",
+    "password": "momoFG567",
+    "age": 12,
+    "address": "99999"
+  },
+  "lastLoggedInTeacher": {
+    "email": "mohammad@gamil.com",
+    "password": "momoA123",
+    "firstName": "Mohammad",
+    "lastName": "Ziadeh"
+  }
 }
