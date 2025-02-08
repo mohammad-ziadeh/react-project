@@ -26,14 +26,14 @@
 .contact-form button {
   width: 240px;
   background-color: var(--Green);
-  font-family: "Nunito";
+  font-family: 'Nunito';
   height: 40px;
   color: #fff;
   border: none;
   outline: none;
   cursor: pointer;
   text-transform: uppercase;
-font-weight: bold;
+  font-weight: bold;
   padding: 0.8rem 2rem;
   border-radius: 0.5rem;
   -webkit-border-radius: 0.5rem;

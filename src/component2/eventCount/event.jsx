@@ -51,25 +51,22 @@ function Backschool() {
             <p className="num">
               <span style={{ fontWeight: 'bold', fontSize: '20px' }}>{timerDays}</span>
               <br />
-              <span>{t('Days')}</span>
+              <span>Days</span>
             </p>
-
             <p className="num">
               <span style={{ fontWeight: 'bold', fontSize: '20px' }}>{timerHours}</span>
               <br />
-              <span>{t('Hrs')}</span>
+              <span>Hrs</span>
             </p>
-
             <p className="num">
               <span style={{ fontWeight: 'bold', fontSize: '20px' }}>{timerMinutes}</span>
               <br />
-              <span>{t('Mins')}</span>
+              <span>Mins</span>
             </p>
-
             <p className="num">
               <span style={{ fontWeight: 'bold', fontSize: '20px' }}>{timerSeconds}</span>
               <br />
-              <span>{t('Secs')}</span>
+              <span>Secs</span>
             </p>
           </div>
         </div>

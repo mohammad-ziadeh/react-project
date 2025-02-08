@@ -47,6 +47,7 @@ function App({ handleScrollToSignup }) {
 
         if (foundTeacher) {
           goToDash();
+          await axios.put('http://localhost:5000/lastLoggedInTeacher', foundTeacher);
         } else if (foundStudent) {
           await axios.put('http://localhost:5000/lastLoggedInStudent', foundStudent);
           goToHome();

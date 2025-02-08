@@ -37,15 +37,15 @@ export default function PersonalProfile() {
   };
 
   return (
-    <div>
+    <>
       <NavBar />
-      <MDBContainer style={{ marginTop: '100px' }}>
+      <MDBContainer style={{ marginTop: '50px' }}>
         <MDBRow>
-          <MDBCol lg="9" className="mb-4">
-            <MDBCard className="mb-3" style={{ borderRadius: '.5rem', maxWidth: '1000px', width: '1000px', height: '500px' }}>
+          <MDBCol lg="20" className="mb-4">
+            <MDBCard className="mb-3" style={{ borderRadius: '.5rem', height: '500px' }}>
               <MDBRow className="g-0">
                 <MDBCol
-                  md="4"
+                  md="12"
                   className="gradient-custom text-center text-white"
                   style={{ borderTopLeftRadius: '.5rem', borderBottomLeftRadius: '.5rem' }}
                 >
@@ -55,8 +55,8 @@ export default function PersonalProfile() {
                     className="my-5"
                     style={{
                       backgroundColor: 'white',
-                      width: '80px',
-                      height: '80px',
+                      width: '110px',
+                      height: '110px',
                       borderRadius: '50%',
                       cursor: 'pointer'
                     }}
@@ -64,21 +64,21 @@ export default function PersonalProfile() {
                     onClick={() => document.getElementById('imageUpload').click()}
                   />
                   <input type="file" id="imageUpload" accept="image/*" onChange={handleImageUpload} style={{ display: 'none' }} />
-                  <MDBTypography tag="h5">{loading ? 'Loading...' : studentData?.name || 'No Data'}</MDBTypography>
+                  <MDBTypography tag="h4">{loading ? 'Loading...' : studentData?.name || 'No Data'}</MDBTypography>
                 </MDBCol>
-                <MDBCol md="8">
-                  <MDBCardBody className="p-5">
+                <MDBCol md="16">
+                  <MDBCardBody className="p-3">
                     <MDBTypography tag="h4">Information</MDBTypography>
                     <MDBRow className="pt-3">
                       <MDBCol size="6" className="mb-4">
-                        <MDBTypography tag="h6">
+                        <MDBTypography tag="h5">
                           <MDBIcon fas icon="envelope" className="me-2" />
                           Email
                         </MDBTypography>
                         <MDBCardText className="text-muted fs-6">{loading ? 'Loading...' : studentData?.email || 'N/A'}</MDBCardText>
                       </MDBCol>
                       <MDBCol size="6" className="mb-4">
-                        <MDBTypography tag="h6">
+                        <MDBTypography tag="h5">
                           <MDBIcon fas icon="phone" className="me-2" />
                           Phone
                         </MDBTypography>
@@ -88,14 +88,14 @@ export default function PersonalProfile() {
 
                     <MDBRow className="pt-3">
                       <MDBCol size="6" className="mb-4">
-                        <MDBTypography tag="h6">
+                        <MDBTypography tag="h5">
                           <MDBIcon fas icon="birthday-cake" className="me-2" />
                           Age
                         </MDBTypography>
                         <MDBCardText className="text-muted fs-6">{loading ? 'Loading...' : studentData?.age || 'N/A'}</MDBCardText>
                       </MDBCol>
                       <MDBCol size="6" className="mb-4">
-                        <MDBTypography tag="h6">
+                        <MDBTypography tag="h5">
                           <MDBIcon fas icon="map-marker-alt" className="me-2" />
                           Address
                         </MDBTypography>
@@ -110,6 +110,6 @@ export default function PersonalProfile() {
         </MDBRow>
       </MDBContainer>
       <Footer />
-    </div>
+    </>
   );
 }

@@ -74,6 +74,7 @@ const Crud = () => {
         <Fields>
           <Field name="id" label="ID" />
           <Field name="name" label="Name" placeholder="Enter Name" />
+          <Field name="phone" label="phone" placeholder="phone number" />
           <Field name="email" label="Email" placeholder="Enter Email" />
           <Field name="password" label="Password" placeholder="Enter Password" type="password" />
           <Field name="age" label="Age" placeholder="Enter Age" type="number" />
@@ -89,6 +90,7 @@ const Crud = () => {
           validate={(values) => {
             const errors = {};
             if (!values.name) errors.name = 'Name is required!';
+            if (!values.phone) errors.phone = 'phone is required!';
             if (!values.email) errors.email = 'Email is required!';
             if (!values.password) errors.password = 'Password is required!';
             if (!values.age) errors.age = 'Age is required!';
@@ -107,6 +109,7 @@ const Crud = () => {
             const errors = {};
             if (!values.id) errors.id = 'ID is required!';
             if (!values.name) errors.name = 'Name is required!';
+            if (!values.phone) errors.phone = 'phone is required!';
             if (!values.email) errors.email = 'Email is required!';
             if (!values.password) errors.password = 'Password is required!';
             if (!values.age) errors.age = 'Age is required!';
