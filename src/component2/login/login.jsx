@@ -48,6 +48,7 @@ function App({ handleScrollToSignup }) {
         if (foundTeacher) {
           goToDash();
         } else if (foundStudent) {
+          await axios.put('http://localhost:5000/lastLoggedInStudent', foundStudent);
           goToHome();
         } else {
           console.error('Invalid email or password');
@@ -66,7 +67,7 @@ function App({ handleScrollToSignup }) {
         <div className="overlay">
           <article>
             <p className="tag">
-              <strong>Welcome to your Account </strong>
+              <strong>Sign in</strong>
             </p>
             <form className="form" onSubmit={formik.handleSubmit}>
               <input
@@ -97,14 +98,14 @@ function App({ handleScrollToSignup }) {
                 Log in
               </button>
 
-              <small>
+              {/* <small>
                 <p>
                   Don't have an account?{' '}
                   <button className="changeButton" onClick={handleScrollToSignup}>
                     Click here to sign up!
                   </button>
                 </p>
-              </small>
+              </small> */}
             </form>
           </article>
         </div>

@@ -3,7 +3,7 @@ import CRUDTable, { Fields, Field, CreateForm, UpdateForm, DeleteForm } from 're
 import axios from 'axios';
 import './crud.css';
 
-const API_URL = 'http://localhost:5000/tasks';
+const API_URL = 'http://localhost:5000/students';
 
 const Crud = () => {
   const [tasks, setTasks] = useState([]);
