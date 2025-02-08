@@ -1,23 +1,49 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from './Button';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 function TeacherProfile() {
   const navigate = useNavigate();
   const goToteacherpro2 = () => navigate('profile');
+
+  const [teacherData, setTeacherData] = useState(null);
   const [avatar, setAvatar] = useState('https://res.cloudinary.com/subframe/image/upload/v1711417513/shared/kwut7rhuyivweg8tmyzl.jpg');
-  const teacherData = {
-    firstName: 'John',
-    lastName: 'Doe',
-    email: 'johndoe@example.com',
-    password: '****'
+  const [loading, setLoading] = useState(true); // To handle loading state
+
+  const LAST_LOGGED_IN_TEACHER_API = 'http://localhost:5000/lastLoggedInTeacher';
+
+  useEffect(() => {
+    const fetchTeacherData = async () => {
+      try {
+        const response = await axios.get(LAST_LOGGED_IN_TEACHER_API);
+        if (response.data) {
+          setTeacherData(response.data);
+        }
+      } catch (error) {
+        console.error('Error fetching teacher data:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchTeacherData();
+  }, []);
+
+  const handleImageUpload = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      const imageUrl = URL.createObjectURL(file);
+      setAvatar(imageUrl);
+      // Here you could also upload the image to the server if needed.
+    }
   };
 
-  // const handleEdit = () => {
-  //   window.location.href = '/edit-profile'; // Navigate to edit profile page
-  // };
+  if (loading) {
+    return <div>Loading teacher profile...</div>; // Simple loading indicator
+  }
 
   return (
     <div
@@ -38,21 +64,28 @@ function TeacherProfile() {
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-          <img style={{ height: '64px', width: '64px', objectFit: 'cover', borderRadius: '50%' }} src={avatar} alt="Avatar" />
+          <img
+            style={{ height: '64px', width: '64px', objectFit: 'cover', borderRadius: '50%' }}
+            src={avatar}
+            alt="Avatar"
+            onClick={() => document.getElementById('imageUpload').click()} // Trigger image upload when clicked
+          />
+          <input type="file" id="imageUpload" accept="image/*" onChange={handleImageUpload} style={{ display: 'none' }} />
         </div>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+          {/* Teacher Info */}
           <div>
-            <strong>First Name:</strong> {teacherData.firstName}
+            <strong>First Name:</strong> {teacherData ? teacherData.firstName : 'No Data'}
           </div>
           <div>
-            <strong>Last Name:</strong> {teacherData.lastName}
+            <strong>Last Name:</strong> {teacherData ? teacherData.lastName : 'No Data'}
           </div>
           <div>
-            <strong>Email:</strong> {teacherData.email}
+            <strong>Email:</strong> {teacherData ? teacherData.email : 'No Data'}
           </div>
           <div>
-            <strong>Password:</strong> {teacherData.password}
+            <strong>Password:</strong> {teacherData ? teacherData.password : '****'}
           </div>
         </div>
       </div>
