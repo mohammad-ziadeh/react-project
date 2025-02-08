@@ -3,7 +3,7 @@
   color: white;
   text-align: center;
   padding: 70px;
-  font-family: "Nunito"
+  font-family: 'Nunito';
 }
 
 .footer-text {
@@ -22,7 +22,6 @@
 
 .footer-links li a {
   color: #ffcc80;
-
   text-decoration: none;
   transition: color 0.3s;
 }
@@ -30,6 +29,7 @@
 .footer-links li a:hover {
   color: #12d9df;
 }
+
 .footer-brand {
   display: flex;
   flex-direction: column;
@@ -38,11 +38,13 @@
   width: 60%;
   gap: 15px;
 }
+
 .footer-container {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 }
+
 .footer-links {
   display: flex;
   flex-direction: column;
@@ -50,7 +52,55 @@
   justify-content: space-between;
   height: 100%;
 }
+
 .footer-links ul li {
   list-style: none;
   margin: 15px;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px;
+  }
+
+  .footer-brand {
+    width: 80%;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-links {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .footer-links ul li {
+    margin: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 30px;
+  }
+
+  .footer-brand {
+    width: 100%;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-text {
+    font-size: 12px;
+  }
+
+  .footer-links li a {
+    font-size: 12px;
+  }
 }

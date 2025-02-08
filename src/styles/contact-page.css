@@ -1,7 +1,8 @@
 .contact-form-container {
   padding: 40px;
- background-color: snow;
+  background-color: snow;
   border-radius: 10px;
+  font-family: "Nunito";
   max-width: 700px;
   margin: 40px auto;
   text-align: center;
@@ -18,6 +19,8 @@
   transform: scale(1.1);
 }
 .section-title {
+  font-family: "Nunito";
+
   margin-top: 100px;
   font-size: 24px;
   color: #5a2eaa;
@@ -30,6 +33,7 @@
 }
 .contact-form input,
 .contact-form textarea {
+  font-family: "Nunito";
   width: 80%;
   padding: 10px;
   margin: 10px 0;
@@ -38,6 +42,7 @@
 }
 
 .contact-form button {
+  font-family: "Nunito";
   width: 250px;
   background-color: var(--Green);
 
@@ -61,10 +66,12 @@
   background-color: #bd1172;
 } */
 h3 {
+  font-family: "Nunito";
   color: #5a2eaa;
 }
 
 .contact-card p {
+  font-family: "Nunito";
   color: #fbd010;
   font-style: italic;
   font-weight: bold;

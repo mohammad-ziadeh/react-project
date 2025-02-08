@@ -11,7 +11,7 @@ function TeacherProfile() {
 
   const [teacherData, setTeacherData] = useState(null);
   const [avatar, setAvatar] = useState('https://res.cloudinary.com/subframe/image/upload/v1711417513/shared/kwut7rhuyivweg8tmyzl.jpg');
-  const [loading, setLoading] = useState(true); // To handle loading state
+  const [loading, setLoading] = useState(true);
 
   const LAST_LOGGED_IN_TEACHER_API = 'http://localhost:5000/lastLoggedInTeacher';
 
@@ -37,12 +37,11 @@ function TeacherProfile() {
     if (file) {
       const imageUrl = URL.createObjectURL(file);
       setAvatar(imageUrl);
-      // Here you could also upload the image to the server if needed.
     }
   };
 
   if (loading) {
-    return <div>Loading teacher profile...</div>; // Simple loading indicator
+    return <div>Loading teacher profile...</div>;
   }
 
   return (
@@ -68,13 +67,12 @@ function TeacherProfile() {
             style={{ height: '64px', width: '64px', objectFit: 'cover', borderRadius: '50%' }}
             src={avatar}
             alt="Avatar"
-            onClick={() => document.getElementById('imageUpload').click()} // Trigger image upload when clicked
+            onClick={() => document.getElementById('imageUpload').click()}
           />
           <input type="file" id="imageUpload" accept="image/*" onChange={handleImageUpload} style={{ display: 'none' }} />
         </div>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-          {/* Teacher Info */}
           <div>
             <strong>First Name:</strong> {teacherData ? teacherData.firstName : 'No Data'}
           </div>
@@ -92,7 +90,7 @@ function TeacherProfile() {
 
       <hr style={{ borderColor: '#e0e0e0' }} />
 
-      <Button
+      {/* <Button
         onClick={goToteacherpro2}
         style={{
           borderRadius: '20px',
@@ -105,7 +103,7 @@ function TeacherProfile() {
         }}
       >
         Edit Information
-      </Button>
+      </Button> */}
     </div>
   );
 }
