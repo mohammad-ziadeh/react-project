@@ -20,7 +20,7 @@ function Technical() {
   };
   return (
     <div className="Mangement">
-      <h2>{t('teachers')} </h2>
+      <h2>{t('Teachers')} </h2>
       <p style={{ width: '70%', margin: 'auto' }}>{t('teacherPara')}</p>
 
       <div className="container-mang">
@@ -28,38 +28,58 @@ function Technical() {
           <img src={Salabel} alt="Member" style={Member} className="image-member" />
           <h4> Salsbel </h4>
           <h6>{t('teacher')}</h6>
-          <a href="./Amro" style={{ borderBottom: '1px dotted red', fontSize: '14px' }}>
-            {' '}
-            More <IoArrowForwardOutline />{' '}
+          <div className="arrow">
+          <h6>{t('techTrainer')} </h6>
+          <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-github fa-lg" style={{ color: 'black', marginRight: '10px' }}></i>
           </a>
+          <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-linkedin fa-lg" style={{ color: 'black' }}></i>
+          </a>
+          </div>
         </div>
 
         <div className="member">
           <img src={Raneem} alt="Member" style={Member} className="image-member" />
           <h4> Raneem Al-Riyati </h4>
           <h6>{t('teacher')}</h6>
-          <a href="./Hussien" style={{ borderBottom: '1px dotted red', fontSize: '14px' }}>
-            {' '}
-            More <IoArrowForwardOutline />{' '}
+          <div className="arrow">
+          <h6>{t('techTrainer')} </h6>
+          <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-github fa-lg" style={{ color: 'black', marginRight: '10px' }}></i>
           </a>
+          <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-linkedin fa-lg" style={{ color: 'black' }}></i>
+          </a>
+          </div>
         </div>
         <div className="member">
           <img src={Mohammad} alt="Member" style={Member} className="image-member" />
           <h4> Mohammad Ziadeh </h4>
           <h6>{t('teacher')}</h6>
-          <a href="./Shahd" style={{ borderBottom: '1px dotted red', fontSize: '14px' }}>
-            {' '}
-            More <IoArrowForwardOutline />{' '}
+          <div className="arrow">
+          <h6>{t('techTrainer')} </h6>
+          <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-github fa-lg" style={{ color: 'black', marginRight: '10px' }}></i>
           </a>
+          <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-linkedin fa-lg" style={{ color: 'black' }}></i>
+          </a>
+          </div>
         </div>
         <div className="member">
           <img src={Abd} alt="Member" style={Member} className="image-member" />
           <h4> Abd Karkash </h4>
           <h6>{t('teacher')}</h6>
-          <a href="./Laith" style={{ borderBottom: '1px dotted red', fontSize: '14px' }}>
-            {' '}
-            More <IoArrowForwardOutline />{' '}
+          <div className="arrow">
+          <h6>{t('techTrainer')} </h6>
+          <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-github fa-lg" style={{ color: 'black', marginRight: '10px' }}></i>
           </a>
+          <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-linkedin fa-lg" style={{ color: 'black' }}></i>
+          </a>
+          </div>
         </div>
       </div>
     </div>

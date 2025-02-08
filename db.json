@@ -31,14 +31,5 @@
       "password": "momoAS234"
     }
   ],
-  "tasks": [
-    {
-      "id": "1",
-      "name": "mohamad",
-      "email": "mohammad@gamil.com",
-      "password": "1234",
-      "age": 43,
-      "address": "098765432"
-    }
-  ]
+  "tasks": []
 }
